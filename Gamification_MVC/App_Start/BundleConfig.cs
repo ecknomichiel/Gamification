@@ -8,6 +8,11 @@ namespace Gamification_MVC
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            //Add All Angular Scripts in the angular bundle.
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/Angular/angular.min.js",
+                "~/Scripts/Angular/MainAngular.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
