@@ -165,6 +165,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\Angular\angular.min.js" />
     <Content Include="Scripts\Angular\Games\Animal\AnimalGame.js" />
+    <Content Include="Scripts\Angular\Games\ColorGame\ColorGame.js" />
     <Content Include="Scripts\Angular\Games\WordSentenceGame\SentenceGame.js" />
     <Content Include="Scripts\Angular\MainAngular.js" />
     <Content Include="Scripts\bootstrap.js" />

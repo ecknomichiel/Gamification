@@ -13,7 +13,8 @@ namespace Gamification_MVC
                 "~/Scripts/Angular/angular.min.js",
                 "~/Scripts/Angular/MainAngular.js",
                 "~/Scripts/Angular/Games/WordSentenceGame/SentenceGame.js",
-                "~/Scripts/Angular/Games/Animal/AnimalGame.js"));
+                "~/Scripts/Angular/Games/Animal/AnimalGame.js",
+                   "~/Scripts/Angular/Games/ColorGame/ColorGame.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
