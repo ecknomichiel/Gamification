@@ -163,7 +163,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Angular\angular.min.js" />
-    <Content Include="Scripts\Angular\Games\testScript.js" />
+    <Content Include="Scripts\Angular\Games\SentenceGame.js" />
     <Content Include="Scripts\Angular\MainAngular.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
