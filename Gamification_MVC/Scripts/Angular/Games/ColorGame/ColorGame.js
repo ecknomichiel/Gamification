@@ -1,5 +1,26 @@
 ﻿var app = angular.module("Game4", []);
 
+
 app.controller("ColorGameCr", ["$scope", "$http", function ($scope, $http) {
-    $scope.color = "testing testing!";
+    $scope.color = " Text Color!";
+    var colors = ["Blue", "Yellow", "Red", "Green", "Black"];
+    var tal = Math.floor((Math.random() * 5));
+    //alert(tal + " : " +color[tal]);
+    $scope.color = colors[tal];
+
+    $scope.myFunc = function (color) {
+        if (color == $scope.color)
+            alert("correct!");
+        else alert("Wrong!");
+ 
+    };
+
 }]);
+
+
+
+
+
+
+
+
