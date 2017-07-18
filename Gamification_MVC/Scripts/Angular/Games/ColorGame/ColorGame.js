@@ -3,18 +3,16 @@
 
 app.controller("ColorGameCr", ["$scope", "$http", function ($scope, $http) {
     $scope.color = " Text Color!";
-    var color = ["Blue ", "Green", "Red", "Black", "Yellow "];
+    var colors = ["Blue", "Yellow", "Red", "Green", "Black"];
+    var tal = Math.floor((Math.random() * 5));
+    //alert(tal + " : " +color[tal]);
+    $scope.color = colors[tal];
 
     $scope.myFunc = function (color) {
-        if (color == 'blue') alert("correct!");
-        if (color == 'yellow') alert("correct!");
-        if (color == 'red') alert("correct!");
-        if (color == 'green') alert("correct!");
-        if (color == 'black') alert("correct!");
-
+        if (color == $scope.color)
+            alert("correct!");
         else alert("Wrong!");
-
-        $scope.count++;
+ 
     };
 
 }]);
