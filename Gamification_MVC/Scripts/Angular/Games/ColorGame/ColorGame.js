@@ -1,4 +1,4 @@
-﻿var app = angular.module("Game4", []);
+﻿var app = angular.module("Gamification");
 
 
 app.controller("ColorGameCr", ["$scope", "$http", function ($scope, $http) {

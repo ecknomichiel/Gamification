@@ -13,7 +13,7 @@ var Points = 0;
 var start = false;
 
 //Game module, Containing a directive for the tag <wordbutton text="A text inside the button"></wordbutton>
-var app = angular.module("Game2", []).directive('wordbutton', function ($compile) {
+var app = angular.module("Gamification").directive('wordbutton', function ($compile) {
     return {
         restrict: 'E', //I'm a little confused with what each restriction does, but it's a learning process
         scope: { // - The custom attribute for the wordbutton - takes everything
