@@ -25,6 +25,10 @@ namespace Gamification_MVC.Controllers
         public ActionResult Color()
         {
             return View();
-        }   
+        }
+        public ActionResult Punctuation()
+        {
+            return View();
+        } 
     }
 }
