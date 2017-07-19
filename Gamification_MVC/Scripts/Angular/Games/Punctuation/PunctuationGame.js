@@ -6,9 +6,17 @@ app.controller("PunctuationGameController", ["$scope", "$http", function ($scope
         "A subordinated clause is a clause that has no meaning if you take away its best friend, the main clause.",
     "Sometimes you would like to give an example, such as: 'this is an exampe'."];
     $scope.getRandomSentence = function (){
-        idx = Math.floor(length($scope.sentences));
-        return $scope.sentences[idx];
+        idx = Math.floor(Math.random() * $scope.sentences.length);
+
+        result = $scope.sentences[idx];
+        return result;
     };
-    $scope.currentSentence = getRandomSentence();
+
+    $scope.getNextQuestion = function () {
+        $scope.currentSentence = $scope.getRandomSentence();
+        $scope.currentQuestion = $scope.currentSentence.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "*");
+    };
+
+    $scope.currentSentence = $scope.getRandomSentence();
     $scope.score = 0;
 }]);
