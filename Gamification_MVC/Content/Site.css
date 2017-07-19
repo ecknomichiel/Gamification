@@ -27,6 +27,7 @@
     width: 80%;
     height: 550px;
     background-color: rgba(0, 255, 255,0.2);
+    color: blue;
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%;
     border: groove rgba(128, 128, 128,0.2) 2px;
