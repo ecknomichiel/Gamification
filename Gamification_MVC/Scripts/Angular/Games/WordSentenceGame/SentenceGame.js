@@ -4,8 +4,9 @@
     the element containing the new tag <wordbutton text=""></wordbutton> must have ng-controller="WordSentenceGame"
 */
 //Global variables
-var WordList = ["Hello", "My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"]; //All words
-var CorrectSentence = [WordList, ["Hello", "My", "Name", "Is", "Kalle"], ["I", "Am", "Eleven", "Years", "Old"], ["Hello", "I", "Am", "Eleven", "Years", "Old"], ["I", "Am", "Kalle"], ["Hello", "I", "Am", "Eleven", "Years", "Old", "And", "I", "My", "Name", "Is", "Kalle"]];
+var GameID = Math.floor(Math.random() * 2) + 0 ; //WordList can contain multiple arrays for words - each array is for each sentence
+var WordList = [["Hello", "My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["The","Car","Color","Is","Yellow","A","Driver","Driving"]]; //All words                                                                                                                                                                                                                                                                                        //New array  - CorrectSentences for WordList[1]                                                                                                        
+var CorrectSentence = [[WordList, ["Hello", "My", "Name", "Is", "Kalle"], ["I", "Am", "Eleven", "Years", "Old"], ["Hello", "I", "Am", "Eleven", "Years", "Old"], ["I", "Am", "Kalle"], ["Hello", "I", "Am", "Eleven", "Years", "Old", "And", "I", "My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"]], [["The", "Car", "Is", "Yellow"], ["A", "Driver", "Is", "Driving", "A", "Car"], ["A", "Driver", "Is", "Driving", "A", "Yellow","Car"],["Car","Is","Yellow"]]];
 
 var WordTaken = []; //User result
 var Points = 0;
@@ -22,9 +23,9 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
         controller: function ($scope, $element) {
             $scope.add = function () { //the add function called by ng-click
                 if (start == false) {
-                    shuffle(WordList); //Randomize all words
-                    for (var i = 0; i < WordList.length; i++) { //Generate all words as buttons
-                        var button = $compile('<button name="Word" ng-controller="WordSentenceGame" ng-click="takeword(' + "'" + WordList[i] + "'" + ')">{{WordSentence[' + i + ']}}</button>')($scope); //Compile the code.
+                    shuffle(WordList[GameID]); //Randomize all words
+                    for (var i = 0; i < WordList[GameID].length; i++) { //Generate all words as buttons
+                        var button = $compile('<button name="Word" ng-controller="WordSentenceGame" ng-click="takeword(' + "'" + WordList[GameID][i] + "'" + ')">{{WordSentence[' + i + ']}}</button>')($scope); //Compile the code.
                         $element.parent().append(button); //We want to append the child to our parent element, so that it's visible
 
                     }
@@ -43,8 +44,8 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
         template: '<button ng-click="finnished()">{{text}}</button><br>', // The template for the <wordbutton> tag - results a button, instead of text
         controller: function ($scope, $element) {
             $scope.finnished = function () { //the finnished function called by ng-click
-                for (var i = 0; i < CorrectSentence.length; i++) {
-                    if (CorrectSentence[i].equals(WordTaken)==true) {
+                for (var i = 0; i < CorrectSentence[GameID].length; i++) {
+                    if (CorrectSentence[GameID][i].equals(WordTaken)==true) {
                         Points++;
                     }
                 };
@@ -59,7 +60,7 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
     app.controller("WordSentenceGame", ["$scope", "$http", function ($scope, $http) {
  
         //All Words, added to a scope variable
-        $scope.WordSentence = WordList;
+        $scope.WordSentence = WordList[GameID];
         //The user pressed a word button and the word is added to an array
         $scope.takeword = function ($id) {
             WordTaken.push($id);
