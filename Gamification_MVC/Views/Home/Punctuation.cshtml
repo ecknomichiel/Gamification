@@ -1,12 +1,16 @@
 ﻿
-    <div ng-controller="PunctuationGameController">
-        <div class="lead">Points: {{score}}</div>
-        <input type="button" value="Start Game" ng-click="start()" />
-        <!--<input type="button" value="Next question" ng-click="getNextQuestion()" />-->
+    <div style="margin-top: 1em; height: 100%;" ng-controller="PunctuationGameController">
         
-        <div><input style="width: 90%" type="text" ng-model="answer" /></div>
-        <div>{{message}}</div>
-        <div><input type="button" value="Check" ng-click="checkAnswer()"/></div>
+        <input type="button" value="Start Game" ng-click="start()" />
+        <div style="height: 80%;">
+            <div>Change each * to the right punctuation mark.</div>
+            <!--<input type="button" value="Next question" ng-click="getNextQuestion()" />-->
+        
+            <div style="margin-top: 1em;"><input style="width: 90%" type="text" ng-model="answer" /></div>
+            <div style="margin-top: 1em;"> {{message}}</div>
+            <div style="margin-top: 1em;"><input type="button" value="Check" ng-click="checkAnswer()" /></div>
+        </div>
+        <div class="lead">Points: {{score}}</div>
 
 
     </div>
