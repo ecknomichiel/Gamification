@@ -29,6 +29,7 @@ app.controller("PunctuationGameController", ["$scope", "$http", function ($scope
     $scope.start = function () {
         $scope.questionnaire = sentences.slice();
         $scope.score = 0;
+        $scope.message = "";
         $scope.getNextQuestion();
     };
 
