@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ColorGame</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="ColorGame.js"></script>  
+    <style>
+        .button {
+            background-color: #008CBA; /* Blue */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 40px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        /* Yellow */
+        .button2 {
+            background-color: #FFFF00;
+        }
+        /* Red */
+        .button3 {
+            background-color: #f44336;
+        }
+        /* Green */
+        .button4 {
+            background-color: #4CAF50;
+        }
+        /* Black */
+        .button5 {
+            background-color: #555555;
+        }
+         /* Brown */
+        .button6 {
+            background-color: #A52A2A;
+        }
+         /* Gray */
+        .button7 {
+            background-color: #808080;
+        }
+        /* Magenta */
+        .button8 {
+            background-color: #FF00FF;
+        }
+      
+    </style>
+
+</head>
+
+<body ng-app="Game4" ng-controller="ColorGameCr">
+
+    <button onclick="myFunction()">Start</button>
+
+    <script>
+        function myFunction() {
+            location.reload(true);
+        }
+    </script>
+
+    <h2>Click a button to select the color corresponding to the text:</h2>
+    <h1>{{color}}</h1>
+
+    <button ng-click="myFunc('Blue')" class="button">--/ \--</button>
+    <button ng-click="myFunc('Yellow')" class="button button2">--/ \--</button>
+    <button ng-click="myFunc('Red')" class="button button3">--/ \--</button>
+    <button ng-click="myFunc('Green')" class="button button4">--/ \--</button>
+    <button ng-click="myFunc('Black')" class="button button5">--/ \--</button>
+    <button ng-click="myFunc('Brown')" class="button button6">--/ \--</button>
+    <button ng-click="myFunc('Gray')" class="button button7">--/ \--</button>
+    <button ng-click="myFunc('Magenta')" class="button button8">--/ \--</button>
+
+</body>
+</html>

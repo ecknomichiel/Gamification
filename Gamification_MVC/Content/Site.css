@@ -1,6 +1,11 @@
 ﻿body {
+    color: gold;
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("Images/nature-kids-background-1.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -8,7 +13,29 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-
+.MenuArea{
+    width: 80%;
+    height: 50px;
+    background-color: rgba(0, 255, 255,0.2);
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border: groove rgba(128, 128, 128,0.2) 2px;
+    margin-left: 10%;
+    margin-top: 12%;
+}
+.GameArea{
+    width: 80%;
+    height: 550px;
+    background-color: rgba(0, 255, 255,0.2);
+    color: blue;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    border: groove rgba(128, 128, 128,0.2) 2px;
+    margin-left: 10%;
+    margin-top: 0%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

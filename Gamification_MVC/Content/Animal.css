@@ -1,0 +1,8 @@
+﻿.AImage{
+    position:absolute;
+    left: 42%;
+    top: 50%;
+    width: 15%;
+    height: 30%;
+    background-color:red;
+}

@@ -14,5 +14,21 @@ namespace Gamification_MVC.Controllers
 
             return View();
         }
+        public ActionResult Sentence()
+        {
+            return View();
+        }
+        public ActionResult Animal()
+        {
+            return View();
+        }
+        public ActionResult Color()
+        {
+            return View();
+        }
+        public ActionResult Punctuation()
+        {
+            return View();
+        } 
     }
 }

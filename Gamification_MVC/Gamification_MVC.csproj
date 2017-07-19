@@ -159,10 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\Animal.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\duck.jpg" />
     <Content Include="Content\Images\moose.jpg" />
+    <Content Include="Content\Images\nature-kids-background-1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -170,6 +172,9 @@
     <Content Include="Scripts\Angular\Games\Animal\AnimalGame.js" />
     <Content Include="Content\Images\cat.jpg" />
     <Content Include="Scripts\Angular\Games\Animal\quiz.html" />
+    <Content Include="Scripts\Angular\Games\ColorGame\ColorGame.js" />
+    <Content Include="Scripts\Angular\Games\ColorGame\ColorTest.html" />
+    <Content Include="Scripts\Angular\Games\Punctuation\PunctuationGame.js" />
     <Content Include="Scripts\Angular\Games\WordSentenceGame\SentenceGame.js" />
     <Content Include="Scripts\Angular\MainAngular.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -211,10 +216,13 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Sentence.cshtml" />
+    <Content Include="Views\Home\Color.cshtml" />
+    <Content Include="Views\Home\Punctuation.cshtml" />
     <Content Include="Views\Home\AnimalGame.cshtml" />
   </ItemGroup>
   <ItemGroup />
