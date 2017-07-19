@@ -13,9 +13,13 @@ app.controller("PunctuationGameController", ["$scope", "$http", function ($scope
     };
 
     $scope.getNextQuestion = function () {
-        $scope.currentSentence = $scope.getRandomSentence();
+        idx = Math.floor(Math.random() * $scope.sentences.length);
+        $scope.currentSentence = $scope.sentences[idx];
+        $scope.sentences.delete
         $scope.currentQuestion = $scope.currentSentence.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "*");
     };
+
+
 
     $scope.currentSentence = $scope.getRandomSentence();
     $scope.score = 0;
