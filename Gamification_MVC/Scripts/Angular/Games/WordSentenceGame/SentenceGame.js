@@ -5,8 +5,8 @@
 */
 //Global variables
 var GameID = Math.floor(Math.random() * 2) + 0 ; //WordList can contain multiple arrays for words - each array is for each sentence
-var WordList = [["Hello", "My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["The","Car","Color","Is","Yellow","A","Driver","Driving"]]; //All words                                                                                                                                                                                                                                                                                        //New array  - CorrectSentences for WordList[1]                                                                                                        
-var CorrectSentence = [[WordList, ["Hello", "My", "Name", "Is", "Kalle"], ["I", "Am", "Eleven", "Years", "Old"], ["Hello", "I", "Am", "Eleven", "Years", "Old"], ["I", "Am", "Kalle"], ["Hello", "I", "Am", "Eleven", "Years", "Old", "And", "I", "My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"]], [["The", "Car", "Is", "Yellow"], ["A", "Driver", "Is", "Driving", "A", "Car"], ["A", "Driver", "Is", "Driving", "A", "Yellow","Car"],["Car","Is","Yellow"]]];
+var WordList = [["Hello", "My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["The","Car","Color","Is","Yellow","A","Driver","Driving"]]; //All words                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                //New array  - CorrectSentences for WordList[1]                                                                                                        
+var CorrectSentence = [[WordList, ["Hello", "My", "Name", "Is", "Kalle"], ["Hello", "My", "Name", "Is", "Kalle","And","I","Am","Eleven","Years","Old"], ["Kalle", "Is", "Eleven", "Years", "Old"], ["I", "Am", "Eleven", "Years", "Old"], ["Hello", "My", "Name", "Is", "Kalle"], ["I", "Am", "Eleven", "Years", "Old"], ["Hello", "I", "Am", "Eleven", "Years", "Old"], ["I", "Am", "Kalle"], ["Hello", "I", "Am", "Eleven", "Years", "Old", "And", "I", "My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"], ["My", "Name", "Is", "Kalle", "And", "I", "Am", "Eleven", "Years", "Old"]], [["The", "Car", "Is", "Yellow"], ["A", "Driver", "Is", "Driving", "A", "Car"], ["A", "Driver", "Is", "Driving", "A", "Yellow", "Car"], ["Car", "Is", "Yellow"], ["The", "Driver", "Is", "Driving", "A", "Car"],["A","Car","Is","Yellow"],["The","Car","Is","Yellow"]]];
 
 var WordTaken = []; //User result
 var Points = 0;
@@ -27,7 +27,6 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
                     for (var i = 0; i < WordList[GameID].length; i++) { //Generate all words as buttons
                         var button = $compile('<button name="Word" ng-controller="WordSentenceGame" ng-click="takeword(' + "'" + WordList[GameID][i] + "'" + ')">{{WordSentence[' + i + ']}}</button>')($scope); //Compile the code.
                         $element.parent().append(button); //We want to append the child to our parent element, so that it's visible
-
                     }
                     start = true;
                     document.getElementById("GameBody").removeChild(document.getElementById("startbutton"));
@@ -47,6 +46,12 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
                 for (var i = 0; i < CorrectSentence[GameID].length; i++) {
                     if (CorrectSentence[GameID][i].equals(WordTaken)==true) {
                         Points++;
+                        GameID = Math.floor(Math.random() * 2) + 0;
+                        removeChildren({ parentId: 'GameBody', childName: 'Word' });
+                        for (var i = 0; i < WordList[GameID].length; i++) { //Generate all words as buttons
+                            var button = $compile('<button name="Word" ng-controller="WordSentenceGame" ng-click="takeword(' + "'" + WordList[GameID][i] + "'" + ')">{{WordSentence[' + i + ']}}</button>')($scope); //Compile the code.
+                            $element.parent().append(button); //We want to append the child to our parent element, so that it's visible
+                        }
                     }
                 };
                 WordTaken = [];
@@ -84,6 +89,18 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
         }
         
         return array;
+    }
+    function removeChildren (params){
+        var parentId = params.parentId;
+        var childName = params.childName;
+
+        var childNodes = document.getElementById(parentId).childNodes;
+        for(var i=childNodes.length-1;i >= 0;i--){
+            var childNode = childNodes[i];
+            if(childNode.name == childName){
+                childNode.parentNode.removeChild(childNode);
+            }
+        }
     }
     // attach the .equals method to Array's prototype to call it on any array
     Array.prototype.equals = function (array) {
