@@ -25,6 +25,7 @@
 }
 .GameArea{
     width: 80%;
+    padding: 1em;
     height: 550px;
     background-color: rgba(0, 255, 255,0.2);
     color: blue;
