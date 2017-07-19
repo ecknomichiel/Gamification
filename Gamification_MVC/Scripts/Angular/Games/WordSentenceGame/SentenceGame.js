@@ -49,6 +49,7 @@ var app = angular.module("Game2", []).directive('wordbutton', function ($compile
                         GameID = Math.floor(Math.random() * 2) + 0;
                         removeChildren({ parentId: 'GameBody', childName: 'Word' });
                         shuffle(WordList[GameID]);
+
                         for (var i = 0; i < WordList[GameID].length; i++) { //Generate all words as buttons
                             var button = $compile('<button name="Word" ng-controller="WordSentenceGame" ng-click="takeword(' + "'" + WordList[GameID][i] + "'" + ')">{{WordSentence[' + i + ']}}</button>')($scope); //Compile the code.
                             $element.parent().append(button); //We want to append the child to our parent element, so that it's visible
