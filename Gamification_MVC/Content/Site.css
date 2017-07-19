@@ -32,6 +32,7 @@
     border: groove rgba(128, 128, 128,0.2) 2px;
     margin-left: 10%;
     margin-top: 0%;
+    overflow-y: auto;
 }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
