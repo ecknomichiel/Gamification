@@ -1,8 +1,8 @@
 ﻿<div id="AniGame" ng-controller="AnimalGame">
-    <button ng-click="test()">Test</button>
-    <button ng-click="gameStart()">Test2</button>
-    <h1>{{animal}}</h1>
-    <h1>{{score}}</h1>
-    <img src="{{image}}" />
+    <button ng-click="startGame()">Start game</button>
+    <h1>{{score}} points</h1>
     <h3>What animal is this?</h3>
+    <input type="text" ng-model="input" placeholder="Type the animal here" />
+    <input type="submit" ng-click="getInput()" placeholder="SEND" />
+    <img src="{{image}}" />
 </div>
