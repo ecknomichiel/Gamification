@@ -33,6 +33,7 @@
     margin-left: 10%;
     margin-top: 0%;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
