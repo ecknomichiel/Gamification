@@ -24,10 +24,6 @@ namespace Gamification_MVC.Controllers
         {
             return View();
         }
-        public ActionResult Animal()
-        {
-            return View();
-        }
         public ActionResult Color()
         {
             return View();
