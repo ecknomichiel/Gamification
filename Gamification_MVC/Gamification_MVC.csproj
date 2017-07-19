@@ -219,11 +219,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Sentence.cshtml" />
     <Content Include="Views\Home\Color.cshtml" />
     <Content Include="Views\Home\Punctuation.cshtml" />
     <Content Include="Views\Home\AnimalGame.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
