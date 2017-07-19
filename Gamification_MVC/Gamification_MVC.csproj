@@ -170,6 +170,7 @@
     <Content Include="Scripts\Angular\Games\Animal\AnimalGame.js" />
     <Content Include="Scripts\Angular\Games\ColorGame\ColorGame.js" />
     <Content Include="Scripts\Angular\Games\ColorGame\ColorTest.html" />
+    <Content Include="Scripts\Angular\Games\Punctuation\PunctuationGame.js" />
     <Content Include="Scripts\Angular\Games\WordSentenceGame\SentenceGame.js" />
     <Content Include="Scripts\Angular\MainAngular.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -218,6 +219,7 @@
     <Content Include="Views\Home\Sentence.cshtml" />
     <Content Include="Views\Home\Animal.cshtml" />
     <Content Include="Views\Home\Color.cshtml" />
+    <Content Include="Views\Home\Punctuation.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
