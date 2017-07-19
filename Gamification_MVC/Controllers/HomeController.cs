@@ -8,7 +8,7 @@ namespace Gamification_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult AnimalGame()
         {
             ViewBag.Title = "Home Page";
 
