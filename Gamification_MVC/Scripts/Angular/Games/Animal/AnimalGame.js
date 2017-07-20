@@ -21,13 +21,13 @@ app.controller("AnimalGame", ["$scope", "$http", function ($scope, $http) {
         var input = $scope.input.toLowerCase();
         if(input==animals[$scope.id])
         {
-            alert("Not too crappy (but you still suck)");
+            alert("Well done!");
             $scope.score++;
             $scope.startGame();
         }
         else
         {
-            alert("Nope.");
+            alert("Nope. Try again");
         }
     }
 }]);

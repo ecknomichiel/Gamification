@@ -1,4 +1,5 @@
-﻿<div ng-controller="ColorGameCr">
+﻿<div style="height:100%" ng-controller="ColorGameCr">
+    <div style="height: 80%">
     <style>
         .button {
             background-color: #008CBA; /* Blue */
@@ -28,11 +29,11 @@
         .button5 {
             background-color: #555555;
         }
-         /* Brown */
+        /* Brown */
         .button6 {
             background-color: #A52A2A;
         }
-         /* Gray */
+        /* Gray */
         .button7 {
             background-color: #808080;
         }
@@ -61,7 +62,9 @@
     <button ng-click="myFunc('Brown')" class="button button6">--/ \--</button>
     <button ng-click="myFunc('Gray')" class="button button7">--/ \--</button>
     <button ng-click="myFunc('Magenta')" class="button button8">--/ \--</button>
+
     <div>{{message}}</div>
+</div>
 
     <h2>Points: {{points}}</h2>
 
